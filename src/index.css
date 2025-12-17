@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cosmic space theme - deep blues and purples */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Deep space blue primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Purple nebula secondary */
+    --secondary: 262 52% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Cosmic cyan accent */
+    --accent: 189 94% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom space tokens */
+    --space-deep: 240 10% 3.9%;
+    --space-dark: 240 10% 8%;
+    --nebula-purple: 262 52% 47%;
+    --stellar-cyan: 189 94% 43%;
+    --cosmic-gold: 43 96% 56%;
+    
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(262 52% 12%) 50%, hsl(240 10% 8%) 100%);
+    --gradient-nebula: linear-gradient(135deg, hsl(262 52% 47%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-stellar: linear-gradient(135deg, hsl(189 94% 43%) 0%, hsl(217 91% 60%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
